@@ -22,6 +22,9 @@ var default_state = State.new(self, {
 
 func _ready():
   FSM.switch(default_state)
+  # FSM.push(default_state)
+  # FSM.pop()
+  # FSM.insert(default_state, 1)
 
 func enter_func():
   print_debug("Hello")
