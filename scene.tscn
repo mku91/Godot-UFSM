@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://test.gd" type="Script" id=1]
+[ext_resource path="res://addons/ufsm/fsm.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 190, 305 )
+texture = ExtResource( 3 )
+script = ExtResource( 1 )
+
+[node name="UFSM" type="Node" parent="Sprite"]
+script = ExtResource( 2 )
+
+[node name="Right_Button" type="Button" parent="."]
+margin_left = 587.0
+margin_top = 253.0
+margin_right = 645.0
+margin_bottom = 273.0
+text = "to right"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Up_Button" type="Button" parent="."]
+margin_left = 586.0
+margin_top = 214.0
+margin_right = 644.0
+margin_bottom = 234.0
+text = "to up"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Soft_Mode_Button" type="Button" parent="."]
+margin_left = 596.0
+margin_top = 291.0
+margin_right = 632.0
+margin_bottom = 311.0
+text = "soft"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Insert_Button" type="Button" parent="."]
+margin_left = 591.0
+margin_top = 325.0
+margin_right = 641.0
+margin_bottom = 345.0
+text = "Insert"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 14.0
+margin_right = 184.0
+margin_bottom = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Right_Button" to="Sprite" method="_on_right_pressed"]
+[connection signal="pressed" from="Up_Button" to="Sprite" method="_on_up_pressed"]
+[connection signal="pressed" from="Soft_Mode_Button" to="Sprite" method="_on_Soft_Mode_Button_pressed"]
+[connection signal="pressed" from="Insert_Button" to="Sprite" method="_on_Insert_Button_pressed"]
