@@ -1,7 +1,7 @@
 # Godot-UFSM
 Godot FSM Plugin
 
-Finite State Machine(v1.0) for Godot(3.4.2)
+Ultimate Finite State Machine(v1.0) for Godot(3.4.2)
 
 # Use
 
